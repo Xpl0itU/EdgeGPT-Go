@@ -3,14 +3,13 @@ package EdgeGPT
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/pavel-one/EdgeGPT-Go/config"
-	"github.com/pavel-one/EdgeGPT-Go/internal/CookieManager"
-	"github.com/pavel-one/EdgeGPT-Go/internal/Helpers"
-	"github.com/pavel-one/EdgeGPT-Go/internal/Logger"
-	"github.com/pavel-one/EdgeGPT-Go/responses"
 	"io"
 	"net/http"
 	"time"
+
+	"github.com/pavel-one/EdgeGPT-Go/config"
+	"github.com/pavel-one/EdgeGPT-Go/internal/Logger"
+	"github.com/pavel-one/EdgeGPT-Go/responses"
 )
 
 var log = Logger.NewLogger("GPT Service")
@@ -34,14 +33,8 @@ type GPT struct {
 
 // NewGPT create new service
 func NewGPT(conf *config.GPT) (*GPT, error) {
-	manager, err := CookieManager.NewManager()
-	if err != nil {
-		return nil, err
-	}
-
 	gpt := &GPT{
 		Config:    conf,
-		cookies:   Helpers.MapToCookies(manager.GetBestCookie()),
 		ExpiredAt: time.Now().Add(time.Minute * 120),
 		client: &http.Client{
 			Timeout: conf.TimeoutRequest,
