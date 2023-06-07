@@ -1,4 +1,4 @@
-module github.com/pavel-one/EdgeGPT-Go
+module github.com/denis-kilchichakov/EdgeGPT-Go
 
 go 1.20
 
