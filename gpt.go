@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/pavel-one/EdgeGPT-Go/config"
-	"github.com/pavel-one/EdgeGPT-Go/internal/Logger"
-	"github.com/pavel-one/EdgeGPT-Go/responses"
+	"github.com/Xpl0itU/EdgeGPT-Go/config"
+	"github.com/Xpl0itU/EdgeGPT-Go/internal/Logger"
+	"github.com/Xpl0itU/EdgeGPT-Go/responses"
 )
 
 var log = Logger.NewLogger("GPT Service")

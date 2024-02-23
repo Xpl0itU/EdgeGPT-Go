@@ -1,7 +1,7 @@
 package Logger
 
 import (
-	"github.com/pavel-one/EdgeGPT-Go/internal/Helpers"
+	"github.com/Xpl0itU/EdgeGPT-Go/internal/Helpers"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"

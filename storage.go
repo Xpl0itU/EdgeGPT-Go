@@ -3,7 +3,7 @@ package EdgeGPT
 import (
 	"errors"
 	"fmt"
-	"github.com/pavel-one/EdgeGPT-Go/config"
+	"github.com/Xpl0itU/EdgeGPT-Go/config"
 	"time"
 )
 

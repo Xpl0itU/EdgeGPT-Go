@@ -7,7 +7,7 @@ import (
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/html"
 	"github.com/gomarkdown/markdown/parser"
-	"github.com/pavel-one/EdgeGPT-Go"
+	"github.com/Xpl0itU/EdgeGPT-Go"
 	"github.com/spf13/cobra"
 	"os"
 	"path/filepath"

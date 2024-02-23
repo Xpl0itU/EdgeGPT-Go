@@ -1,8 +1,8 @@
 ## 🪄 EdgeGPT-Go
 
 ![Go version](https://img.shields.io/github/go-mod/go-version/pavel-one/EdgeGPT-GO)
-[![Release](https://img.shields.io/github/v/release/pavel-one/EdgeGPT-GO)](https://github.com/pavel-one/EdgeGPT-Go/releases)
-[![Go Reference](https://pkg.go.dev/badge/github.com/pavel-one/EdgeGPT-Go.svg)](https://pkg.go.dev/github.com/pavel-one/EdgeGPT-Go)
+[![Release](https://img.shields.io/github/v/release/pavel-one/EdgeGPT-GO)](https://github.com/Xpl0itU/EdgeGPT-Go/releases)
+[![Go Reference](https://pkg.go.dev/badge/github.com/Xpl0itU/EdgeGPT-Go.svg)](https://pkg.go.dev/github.com/Xpl0itU/EdgeGPT-Go)
 
 <p align="center">
   <img src="./docs/preview.gif" alt="EdgeGPT-GO preview"/>
@@ -27,19 +27,19 @@ The package supports multiple cookies. As well as rapid deployment as a microser
 docker run -it -v ./cookies:/app/cookies ghcr.io/pavel-one/edgegpt-chat
 ```
 
-Or download binary in [release page](https://github.com/pavel-one/EdgeGPT-Go/releases)
+Or download binary in [release page](https://github.com/Xpl0itU/EdgeGPT-Go/releases)
 
 ### Use as a library
 
 ```shell
-go get github.com/pavel-one/EdgeGPT-Go
+go get github.com/Xpl0itU/EdgeGPT-Go
 ```
 
 ```go
 package main
 
 import (
-	"github.com/pavel-one/EdgeGPT-Go"
+	"github.com/Xpl0itU/EdgeGPT-Go"
 	"log"
 )
 

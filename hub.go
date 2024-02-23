@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/gorilla/websocket"
-	"github.com/pavel-one/EdgeGPT-Go/config"
-	"github.com/pavel-one/EdgeGPT-Go/internal/Helpers"
-	"github.com/pavel-one/EdgeGPT-Go/responses"
+	"github.com/Xpl0itU/EdgeGPT-Go/config"
+	"github.com/Xpl0itU/EdgeGPT-Go/internal/Helpers"
+	"github.com/Xpl0itU/EdgeGPT-Go/responses"
 	"net/url"
 	"sync"
 )

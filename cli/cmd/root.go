@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/pavel-one/EdgeGPT-Go"
-	"github.com/pavel-one/EdgeGPT-Go/internal/Logger"
+	"github.com/Xpl0itU/EdgeGPT-Go"
+	"github.com/Xpl0itU/EdgeGPT-Go/internal/Logger"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 	"os"
