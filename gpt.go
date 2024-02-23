@@ -20,6 +20,8 @@ const (
 	StylePrecise  = "h3precise,clgalileo"
 	DelimiterByte = uint8(30)
 	Delimiter     = "\x1e"
+	MaxMessageSizeGPT3 = 2000,
+	MaxMessageSizeGPT4 = 4000,
 )
 
 type GPT struct {
@@ -123,9 +125,23 @@ Example:
 	}
 */
 func (g *GPT) AskAsync(style, message string) (*responses.MessageWrapper, error) {
-
-	if len(message) > 2000 {
-		return nil, fmt.Errorf("message very long, max: %d", 2000)
+	switch (style) {
+	case StyleCreative:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", 2000)
+		}
+	case StyleBalanced:
+		if len(message) > MaxMessageSizeGPT3 {
+			return nil, fmt.Errorf("message very long, max: %d", MaxMessageSizeGPT3)
+		}
+	case StylePrecise:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", 2000)
+		}
+	default:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", 2000)
+		}
 	}
 
 	log.Infoln("New ask:", message)
@@ -134,8 +150,23 @@ func (g *GPT) AskAsync(style, message string) (*responses.MessageWrapper, error)
 
 // AskSync getting answer sync
 func (g *GPT) AskSync(style, message string) (*responses.MessageWrapper, error) {
-	if len(message) > 2000 {
-		return nil, fmt.Errorf("message very long, max: %d", 2000)
+	switch (style) {
+	case StyleCreative:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", MaxMessageSizeGPT4)
+		}
+	case StyleBalanced:
+		if len(message) > MaxMessageSizeGPT3 {
+			return nil, fmt.Errorf("message very long, max: %d", MaxMessageSizeGPT3)
+		}
+	case StylePrecise:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", MaxMessageSizeGPT4)
+		}
+	default:
+		if len(message) > MaxMessageSizeGPT4 {
+			return nil, fmt.Errorf("message very long, max: %d", MaxMessageSizeGPT4)
+		}
 	}
 
 	m, err := g.Hub.send(style, message)
