@@ -20,8 +20,8 @@ const (
 	StylePrecise  = "h3precise,clgalileo"
 	DelimiterByte = uint8(30)
 	Delimiter     = "\x1e"
-	MaxMessageSizeGPT3 = 2000,
-	MaxMessageSizeGPT4 = 4000,
+	MaxMessageSizeGPT3 = 2000
+	MaxMessageSizeGPT4 = 4000
 )
 
 type GPT struct {
